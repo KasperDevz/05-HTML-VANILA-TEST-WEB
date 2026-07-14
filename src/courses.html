@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Courses — Draft</title>
+<meta name="description" content="Browse every course on Draft: full specs on duration, level, and the professional teaching it.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          navy:   '#16233D',
+          navy2:  '#1D3050',
+          paper:  '#ECE8DC',
+          amber:  '#E8963C',
+          line:   '#4C6D9C',
+          ink:    '#E9ECF2',
+          slate:  '#8CA0BE',
+        },
+        fontFamily: {
+          display: ['Syne', 'sans-serif'],
+          body: ['Inter', 'sans-serif'],
+          mono: ['"IBM Plex Mono"', 'monospace'],
+        },
+      },
+    },
+  }
+</script>
+
+<style>
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+  }
+  .blueprint-grid {
+    background-image:
+      linear-gradient(rgba(76,109,156,0.35) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(76,109,156,0.35) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .crop-mark {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border-color: #4C6D9C;
+  }
+  .fade-up {
+    opacity: 0;
+    transform: translateY(14px);
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+  @keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body class="bg-navy text-ink font-body">
+
+<!-- Navbar -->
+<header class="border-b border-line/30">
+  <nav class="max-w-6xl mx-auto flex items-center justify-between px-6 py-5">
+    <a href="index.html" class="flex items-center gap-2 font-display font-semibold text-lg tracking-tight">
+      <span class="w-7 h-7 border-2 border-amber flex items-center justify-center text-amber text-xs font-mono rounded-sm">D</span>
+      DRAFT
+    </a>
+    <div class="hidden md:flex items-center gap-8 font-mono text-xs uppercase tracking-widest text-slate">
+      <a href="courses.html" class="text-ink">Courses</a>
+      <a href="index.html#start" class="hover:text-ink transition-colors">Start</a>
+      <a href="#" class="hover:text-ink transition-colors">Log in</a>
+    </div>
+    <a href="index.html#start" class="font-mono text-xs uppercase tracking-widest bg-amber text-navy px-4 py-2 rounded-sm font-medium hover:bg-ink transition-colors">
+      Sign up
+    </a>
+  </nav>
+</header>
+
+<!-- Page header: blueprint sheet -->
+<section class="relative overflow-hidden blueprint-grid border-b border-line/30">
+  <div class="crop-mark top-6 left-6 border-l-2 border-t-2 hidden sm:block"></div>
+  <div class="crop-mark top-6 right-6 border-r-2 border-t-2 hidden sm:block"></div>
+
+  <div class="max-w-6xl mx-auto px-6 py-20 md:py-24 relative">
+    <p class="fade-up font-mono text-xs uppercase tracking-widest text-amber mb-4" style="animation-delay:0ms">
+      Sheet No. 003 — Course Catalog
+    </p>
+    <h1 class="fade-up font-display font-semibold text-4xl md:text-6xl leading-[1.05] tracking-tight max-w-3xl" style="animation-delay:80ms">
+      Every course, drawn to spec.
+    </h1>
+    <p class="fade-up mt-6 text-slate text-lg max-w-xl leading-relaxed" style="animation-delay:160ms">
+      Pick a skill. Each build comes with a clear duration, a named instructor, and a
+      tolerance for zero fluff.
+    </p>
+  </div>
+</section>
+
+<!-- Course grid -->
+<section class="max-w-6xl mx-auto px-6 py-20">
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <!-- Card -->
+    <article class="fade-up border border-line/30 rounded-sm p-6 flex flex-col hover:border-amber/60 transition-colors" style="animation-delay:0ms">
+      <p class="font-mono text-[11px] uppercase tracking-widest text-amber mb-3">Sheet 01 — Web Dev</p>
+      <h2 class="font-display font-semibold text-2xl tracking-tight">Full-Stack Foundations</h2>
+      <p class="text-slate mt-3 text-sm leading-relaxed flex-1">
+        Ship a working web app from database to deploy, reviewed line-by-line by a working engineer.
+      </p>
+      <dl class="grid grid-cols-2 gap-3 mt-6 border-t border-line/30 pt-4 font-mono text-[11px] uppercase tracking-widest text-slate">
+        <div><dt>Duration</dt><dd class="font-body normal-case text-ink text-sm mt-0.5">6 weeks</dd></div>
+        <div><dt>Level</dt><dd class="font-body normal-case text-ink text-sm mt-0.5">Beginner</dd></div>
+      </dl>
+      <div class="flex items-center justify-between mt-6">
+        <span class="font-display font-semibold text-lg">$249</span>
+        <a href="#" class="font-mono text-xs uppercase tracking-widest bg-amber text-navy px-4 py-2 rounded-sm font-medium hover:bg-ink transition-colors">Enroll</a>
+      </div>
+    </article>
+
+    <!-- Card -->
+    <article class="fade-up border border-line/30 rounded-sm p-6 flex flex-col hover:border-amber/60 transition-colors" style="animation-delay:60ms">
+      <p class="font-mono text-[11px] uppercase tracking-widest text-amber mb-3">Sheet 02 — Product Design</p>
+      <h2 class="font-display font-semibold text-2xl tracking-tight">UI Systems That Scale</h2>
+      <p class="text-slate mt-3 text-sm leading-relaxed flex-1">
+        Build a real design system: tokens, components, and the documentation that keeps a team aligned.
+      </p>
+      <dl class="grid grid-cols-2 gap-3 mt-6 border-t border-line/30 pt-4 font-mono text-[11px] uppercase tracking-widest text-slate">
+        <div><dt>Duration</dt><dd class="font-body normal-case text-ink text-sm mt-0.5">4 weeks</dd></div>
+        <div><dt>Level</dt><dd class="font-body normal-case text-ink text-sm mt-0.5">Intermediate</dd></div>
+      </dl>
+      <div class="flex items-center justify-between mt-6">
+        <span class="font-display font-semibold text-lg">$199</span>
+        <a href="#" class="font-mono text-xs uppercase tracking-widest bg-amber text-navy px-4 py-2 rounded-sm font-medium hover:bg-ink transition-colors">Enroll</a>
+      </div>
+    </article>
+
+    <!-- Card -->
+    <article class="fade-up border border-line/30 rounded-sm p-6 flex flex-col hover:border-amber/60 transition-colors" style="animation-delay:120ms">
+      <p class="font-mono text-[11px] uppercase tracking-widest text-amber mb-3">Sheet 03 — Data</p>
+      <h2 class="font-display font-semibold text-2xl tracking-tight">Applied Data Analysis</h2>
+      <p class="text-slate mt-3 text-sm leading-relaxed flex-1">
+        Turn messy spreadsheets into decisions, using the same tools working analysts ship with daily.
+      </p>
+      <dl class="grid grid-cols-2 gap-3 mt-6 border-t border-line/30 pt-4 font-mono text-[11px] uppercase tracking-widest text-slate">
+        <div><dt>Duration</dt><dd class="font-body normal-case text-ink text-sm mt-0.5">5 weeks</dd></div>
+        <div><dt>Level</dt><dd class="font-body normal-case text-ink text-sm mt-0.5">Beginner</dd></div>
+      </dl>
+      <div class="flex items-center justify-between mt-6">
+        <span class="font-display font-semibold text-lg">$179</span>
+        <a href="#" class="font-mono text-xs uppercase tracking-widest bg-amber text-navy px-4 py-2 rounded-sm font-medium hover:bg-ink transition-colors">Enroll</a>
+      </div>
+    </article>
+
+    <!-- Card -->
+    <article class="fade-up border border-line/30 rounded-sm p-6 flex flex-col hover:border-amber/60 transition-colors" style="animation-delay:180ms">
+      <p class="font-mono text-[11px] uppercase tracking-widest text-amber mb-3">Sheet 04 — Backend</p>
+      <h2 class="font-display font-semibold text-2xl tracking-tight">APIs Built to Last</h2>
+      <p class="text-slate mt-3 text-sm leading-relaxed flex-1">
+        Design, version, and harden REST and GraphQL APIs that survive real production traffic.
+      </p>
+      <dl class="grid grid-cols-2 gap-3 mt-6 border-t border-line/30 pt-4 font-mono text-[11px] uppercase tracking-widest text-slate">
+        <div><dt>Duration</dt><dd class="font-body normal-case text-ink text-sm mt-0.5">7 weeks</dd></div>
+        <div><dt>Level</dt><dd class="font-body normal-case text-ink text-sm mt-0.5">Advanced</dd></div>
+      </dl>
+      <div class="flex items-center justify-between mt-6">
+        <span class="font-display font-semibold text-lg">$299</span>
+        <a href="#" class="font-mono text-xs uppercase tracking-widest bg-amber text-navy px-4 py-2 rounded-sm font-medium hover:bg-ink transition-colors">Enroll</a>
+      </div>
+    </article>
+
+    <!-- Card -->
+    <article class="fade-up border border-line/30 rounded-sm p-6 flex flex-col hover:border-amber/60 transition-colors" style="animation-delay:240ms">
+      <p class="font-mono text-[11px] uppercase tracking-widest text-amber mb-3">Sheet 05 — Mobile</p>
+      <h2 class="font-display font-semibold text-2xl tracking-tight">Cross-Platform Apps</h2>
+      <p class="text-slate mt-3 text-sm leading-relaxed flex-1">
+        Ship one codebase to iOS and Android, with a working release published to both stores.
+      </p>
+      <dl class="grid grid-cols-2 gap-3 mt-6 border-t border-line/30 pt-4 font-mono text-[11px] uppercase tracking-widest text-slate">
+        <div><dt>Duration</dt><dd class="font-body normal-case text-ink text-sm mt-0.5">6 weeks</dd></div>
+        <div><dt>Level</dt><dd class="font-body normal-case text-ink text-sm mt-0.5">Intermediate</dd></div>
+      </dl>
+      <div class="flex items-center justify-between mt-6">
+        <span class="font-display font-semibold text-lg">$249</span>
+        <a href="#" class="font-mono text-xs uppercase tracking-widest bg-amber text-navy px-4 py-2 rounded-sm font-medium hover:bg-ink transition-colors">Enroll</a>
+      </div>
+    </article>
+
+    <!-- Card -->
+    <article class="fade-up border border-line/30 rounded-sm p-6 flex flex-col hover:border-amber/60 transition-colors" style="animation-delay:300ms">
+      <p class="font-mono text-[11px] uppercase tracking-widest text-amber mb-3">Sheet 06 — DevOps</p>
+      <h2 class="font-display font-semibold text-2xl tracking-tight">Shipping With Confidence</h2>
+      <p class="text-slate mt-3 text-sm leading-relaxed flex-1">
+        CI/CD, containers, and monitoring — the infrastructure that stands behind every deploy.
+      </p>
+      <dl class="grid grid-cols-2 gap-3 mt-6 border-t border-line/30 pt-4 font-mono text-[11px] uppercase tracking-widest text-slate">
+        <div><dt>Duration</dt><dd class="font-body normal-case text-ink text-sm mt-0.5">5 weeks</dd></div>
+        <div><dt>Level</dt><dd class="font-body normal-case text-ink text-sm mt-0.5">Advanced</dd></div>
+      </dl>
+      <div class="flex items-center justify-between mt-6">
+        <span class="font-display font-semibold text-lg">$279</span>
+        <a href="#" class="font-mono text-xs uppercase tracking-widest bg-amber text-navy px-4 py-2 rounded-sm font-medium hover:bg-ink transition-colors">Enroll</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- CTA banner -->
+<section class="bg-amber text-navy">
+  <div class="max-w-6xl mx-auto px-6 py-16 flex flex-col md:flex-row items-center justify-between gap-6">
+    <div>
+      <p class="font-mono text-xs uppercase tracking-widest opacity-70 mb-2">Sheet No. 007 — Enrollment</p>
+      <h2 class="font-display font-semibold text-3xl md:text-4xl tracking-tight">
+        Don't see your skill yet?
+      </h2>
+    </div>
+    <a href="#" class="whitespace-nowrap bg-navy text-ink font-display font-semibold px-7 py-3.5 rounded-sm hover:bg-navy2 transition-colors">
+      Request a course
+    </a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="border-t border-line/30">
+  <div class="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
+    <a href="index.html" class="flex items-center gap-2 font-display font-semibold tracking-tight">
+      <span class="w-6 h-6 border-2 border-amber flex items-center justify-center text-amber text-[10px] font-mono rounded-sm">D</span>
+      DRAFT
+    </a>
+    <div class="flex items-center gap-8 font-mono text-xs uppercase tracking-widest text-slate">
+      <a href="courses.html" class="hover:text-ink transition-colors">Courses</a>
+      <a href="#" class="hover:text-ink transition-colors">About</a>
+      <a href="#" class="hover:text-ink transition-colors">Contact</a>
+    </div>
+    <p class="font-mono text-xs text-slate">© 2026 Draft. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
