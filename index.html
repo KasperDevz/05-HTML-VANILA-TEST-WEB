@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Draft — Blueprints for skills you can actually use</title>
+<meta name="description" content="Draft is an online course platform where every skill ships with a blueprint: a clear spec, a build order, and a working professional guiding the work.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          navy:   '#16233D',
+          navy2:  '#1D3050',
+          paper:  '#ECE8DC',
+          amber:  '#E8963C',
+          line:   '#4C6D9C',
+          ink:    '#E9ECF2',
+          slate:  '#8CA0BE',
+        },
+        fontFamily: {
+          display: ['"Space Grotesk"', 'sans-serif'],
+          body: ['Inter', 'sans-serif'],
+          mono: ['"IBM Plex Mono"', 'monospace'],
+        },
+      },
+    },
+  }
+</script>
+
+<style>
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+  }
+  .blueprint-grid {
+    background-image:
+      linear-gradient(rgba(76,109,156,0.35) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(76,109,156,0.35) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .crop-mark {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border-color: #4C6D9C;
+  }
+  .fade-up {
+    opacity: 0;
+    transform: translateY(14px);
+    animation: fadeUp 0.7s ease-out forwards;
+  }
+  @keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body class="bg-navy text-ink font-body">
+
+<!-- Navbar -->
+<header class="border-b border-line/30">
+  <nav class="max-w-6xl mx-auto flex items-center justify-between px-6 py-5">
+    <a href="#" class="flex items-center gap-2 font-display font-semibold text-lg tracking-tight">
+      <span class="w-7 h-7 border-2 border-amber flex items-center justify-center text-amber text-xs font-mono rounded-sm">D</span>
+      DRAFT
+    </a>
+    <div class="hidden md:flex items-center gap-8 font-mono text-xs uppercase tracking-widest text-slate">
+      <a href="#specs" class="hover:text-ink transition-colors">Specs</a>
+      <a href="#start" class="hover:text-ink transition-colors">Start</a>
+      <a href="#" class="hover:text-ink transition-colors">Log in</a>
+    </div>
+    <a href="#start" class="font-mono text-xs uppercase tracking-widest bg-amber text-navy px-4 py-2 rounded-sm font-medium hover:bg-ink transition-colors">
+      Sign up
+    </a>
+  </nav>
+</header>
+
+<!-- Hero: blueprint sheet -->
+<section class="relative overflow-hidden blueprint-grid">
+  <!-- corner registration marks -->
+  <div class="crop-mark top-6 left-6 border-l-2 border-t-2 hidden sm:block"></div>
+  <div class="crop-mark top-6 right-6 border-r-2 border-t-2 hidden sm:block"></div>
+  <div class="crop-mark bottom-6 left-6 border-l-2 border-b-2 hidden sm:block"></div>
+  <div class="crop-mark bottom-6 right-6 border-r-2 border-b-2 hidden sm:block"></div>
+
+  <div class="max-w-6xl mx-auto px-6 py-28 md:py-36 relative">
+
+    <p class="fade-up font-mono text-xs uppercase tracking-widest text-amber mb-6" style="animation-delay:0ms">
+      Sheet No. 001 — Skill Acquisition
+    </p>
+
+    <h1 class="fade-up font-display font-semibold text-5xl md:text-7xl leading-[1.05] tracking-tight max-w-4xl" style="animation-delay:80ms">
+      Blueprints for skills
+      <span class="relative inline-block">
+        you can
+        <svg class="absolute left-0 -bottom-2 w-full" height="10" viewBox="0 0 200 10" preserveAspectRatio="none">
+          <path d="M0,6 Q50,0 100,6 T200,6" stroke="#E8963C" stroke-width="2" fill="none"/>
+        </svg>
+      </span>
+      actually use.
+    </h1>
+
+    <p class="fade-up mt-8 text-slate text-lg md:text-xl max-w-xl leading-relaxed" style="animation-delay:160ms">
+      Every course on Draft ships like an engineering drawing: a clear spec, a build order,
+      and a working professional walking beside you until it's done.
+    </p>
+
+    <div class="fade-up mt-10 flex flex-col sm:flex-row gap-4" style="animation-delay:240ms">
+      <a href="#start" class="text-center bg-amber text-navy font-display font-semibold px-7 py-3.5 rounded-sm hover:bg-ink transition-colors">
+        Start your first draft
+      </a>
+      <a href="#specs" class="text-center border border-line text-ink font-display font-medium px-7 py-3.5 rounded-sm hover:border-ink transition-colors">
+        View course specs
+      </a>
+    </div>
+
+    <!-- annotation callouts -->
+    <div id="specs" class="fade-up mt-24 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10 border-t border-line/30 pt-8" style="animation-delay:320ms">
+      <div>
+        <p class="font-mono text-[11px] uppercase tracking-widest text-slate">Skill</p>
+        <p class="font-display text-lg mt-1">Full-stack dev</p>
+      </div>
+      <div>
+        <p class="font-mono text-[11px] uppercase tracking-widest text-slate">Duration</p>
+        <p class="font-display text-lg mt-1">6 weeks</p>
+      </div>
+      <div>
+        <p class="font-mono text-[11px] uppercase tracking-widest text-slate">Reviewed by</p>
+        <p class="font-display text-lg mt-1">Working engineers</p>
+      </div>
+      <div>
+        <p class="font-mono text-[11px] uppercase tracking-widest text-slate">Tolerance</p>
+        <p class="font-display text-lg mt-1">Zero fluff</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA banner -->
+<section id="start" class="bg-amber text-navy">
+  <div class="max-w-6xl mx-auto px-6 py-16 flex flex-col md:flex-row items-center justify-between gap-6">
+    <div>
+      <p class="font-mono text-xs uppercase tracking-widest opacity-70 mb-2">Sheet No. 002 — Enrollment</p>
+      <h2 class="font-display font-semibold text-3xl md:text-4xl tracking-tight">
+        Ready to start your first draft?
+      </h2>
+    </div>
+    <a href="#" class="whitespace-nowrap bg-navy text-ink font-display font-semibold px-7 py-3.5 rounded-sm hover:bg-navy2 transition-colors">
+      Get started free
+    </a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="border-t border-line/30">
+  <div class="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
+    <a href="#" class="flex items-center gap-2 font-display font-semibold tracking-tight">
+      <span class="w-6 h-6 border-2 border-amber flex items-center justify-center text-amber text-[10px] font-mono rounded-sm">D</span>
+      DRAFT
+    </a>
+    <div class="flex items-center gap-8 font-mono text-xs uppercase tracking-widest text-slate">
+      <a href="#" class="hover:text-ink transition-colors">Courses</a>
+      <a href="#" class="hover:text-ink transition-colors">About</a>
+      <a href="#" class="hover:text-ink transition-colors">Contact</a>
+    </div>
+    <p class="font-mono text-xs text-slate">© 2026 Draft. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
